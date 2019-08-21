@@ -8,7 +8,8 @@ add.addEventListener('click', (event) =>
 
     if(!text.value)
     {
-        return alert('Fill the task');
+        UIkit.notification({message: 'Fill the task', status: 'danger'});
+        return;
     }
 
     create(text.value);
