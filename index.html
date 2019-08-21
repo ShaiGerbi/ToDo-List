@@ -11,17 +11,20 @@
     </head>
     <body>
 
-        <form method="post">
-            <input type="text" id="text" placeholder="Task" />
-            <input type="button" id="add" value="Add" />
-        </form>
+        <div class="uk-container">
 
-        <ul id="list">
-        </ul>
+            <ul id="list" class="uk-list uk-list-divider"></ul>
+
+            <form class="uk-grid-small uk-position-fixed uk-position-bottom" uk-grid>
+                <input type="text" id="text" class="uk-input uk-width-4-5" placeholder="Task" />
+                <button id="add" class="uk-button uk-button-primary uk-width-1-5">Add</button>
+            </form>
+
+        </div>
 
         <script src="./js/uikit.min.js"></script>
         <script src="./js/uikit-icons.min.js"></script>
-        <script src="./source.js"></script>
+        <script src="./js/source.js"></script>
 
     </body>
 </html>
