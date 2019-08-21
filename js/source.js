@@ -19,6 +19,12 @@ add.addEventListener('click', (event) =>
 
 function create(text)
 {
-    let newItem = `<li>${text}</li>`;
+    let newItem = `
+                       <li>
+                           <input class="completed uk-checkbox" type="checkbox" />
+                           <span>${text}</span>
+                           <a href="#" class="uk-float-right" uk-icon="trash"></a>
+                       </li>
+                  `;
     list.insertAdjacentHTML('beforeend', newItem);
 }
