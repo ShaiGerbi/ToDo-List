@@ -1,0 +1,19 @@
+{
+  "name": "todo-list",
+  "version": "1.0.0",
+  "description": "",
+  "main": "js/source.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShaiGerbi/ToDo-List.git"
+  },
+  "author": "Shai Gerbi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ShaiGerbi/ToDo-List/issues"
+  },
+  "homepage": "https://github.com/ShaiGerbi/ToDo-List#readme"
+}
