@@ -23,6 +23,10 @@ list.addEventListener('click', (event) =>
     {
         completed(event.target);
     }
+    else if(event.target.matches(['a', 'svg', 'polyline', 'rect',]))
+    {
+        remove(event.target);
+    }
 });
 
 function create(text)
@@ -40,4 +44,29 @@ function create(text)
 function completed(item)
 {
     item.parentNode.querySelector('span').classList.toggle('completed');
+}
+
+function remove(item)
+{
+    switch (item.tagName)
+    {
+        case 'a':
+            list.removeChild(item.parentNode);
+            break;
+
+        case 'svg':
+            list.removeChild(item.parentNode.parentNode);
+            break;
+
+        case 'polyline':
+            list.removeChild(item.parentNode.parentNode.parentNode);
+            break;
+
+        case 'rect':
+            list.removeChild(item.parentNode.parentNode.parentNode);
+            break;
+
+        default:
+            return;
+    }
 }
