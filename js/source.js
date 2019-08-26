@@ -17,6 +17,14 @@ add.addEventListener('click', (event) =>
     text.value = null;
 });
 
+list.addEventListener('click', (event) =>
+{
+    if(event.target.matches('input'))
+    {
+        completed(event.target);
+    }
+});
+
 function create(text)
 {
     let newItem = `
@@ -27,4 +35,9 @@ function create(text)
                        </li>
                   `;
     list.insertAdjacentHTML('beforeend', newItem);
+}
+
+function completed(item)
+{
+    item.parentNode.querySelector('span').classList.toggle('completed');
 }
